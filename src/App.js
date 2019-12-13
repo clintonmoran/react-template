@@ -6,6 +6,7 @@ import Header from "./Pages/Layout/Header";
 import Footer from "./Pages/Layout/Footer";
 import About from "./Pages/About/About";
 import Home from "./Pages/Home/Home";
+import Hooks from "./Pages/Hooks/Hooks";
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
       <Switch>
         <Route path="/about">
           <About />
+        </Route>
+        <Route path="/hooks">
+          <Hooks />
         </Route>
         <Route exact path="/">
           <Home />
