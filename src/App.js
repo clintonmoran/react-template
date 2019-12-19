@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Header from "./Pages/Layout/Header";
 import Footer from "./Pages/Layout/Footer";
 import About from "./Pages/About/About";
-import { Test } from './Pages/Test/Test';
+import { Test } from './Pages/Testing/Test';
 import Home from "./Pages/Home/Home";
 import Hooks from "./Pages/Hooks/Hooks";
 
@@ -25,7 +25,7 @@ function App() {
               <Link to="/users">Users</Link>
             </li>
             <li>
-              <Link to="/testing">Tests</Link>
+              <Link to="/testing">Testing</Link>
             </li>
           </ul>
         </nav>
