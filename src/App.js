@@ -1,10 +1,13 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import logo from "./logo.svg";
 import "./App.css";
-import Home from "./Pages/Home/Home";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
+import Header from "./Pages/Layout/Header";
+import Footer from "./Pages/Layout/Footer";
 import About from "./Pages/About/About";
 import { Test } from './Pages/Test/Test';
+import Home from "./Pages/Home/Home";
+import Hooks from "./Pages/Hooks/Hooks";
 
 function App() {
   return (
@@ -38,6 +41,19 @@ function App() {
           </Route>
         </Switch>
       </div>
+      <Header />
+      <Switch>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/hooks">
+          <Hooks />
+        </Route>
+        <Route exact path="/">
+          <Home />
+        </Route>
+      </Switch>
+      <Footer />
     </Router>
   );
 }
