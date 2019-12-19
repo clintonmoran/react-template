@@ -1,0 +1,32 @@
+ .top_header {
+     height: 35px;
+     width: 100%;
+     background-color: #003A47;
+ }
+
+ .nav__container {
+     display: flex;
+ }
+
+ .nav__logo {
+     width: 150px;
+     height: 80px;
+ }
+
+ .nav__list {
+     margin-left: auto;
+     order: 2;
+     justify-content: flex-end;
+ }
+
+ .nav__item {
+     list-style: none;
+     display: inline-block;
+     padding: 1em;
+     color: white;
+ }
+
+ .nav__link {
+     text-decoration: none;
+     color: black;
+ }

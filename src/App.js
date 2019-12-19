@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-import Header from "./Pages/Layout/Header";
+import Header from "./Pages/Layout/Header/Header";
 import Footer from "./Pages/Layout/Footer";
 import About from "./Pages/About/About";
 import { Test } from './Pages/Testing/Test';
