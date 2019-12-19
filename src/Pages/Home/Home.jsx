@@ -2,6 +2,8 @@ import React from "react";
 import { Button, DropDown } from "@healthwise-ui/core";
 
 const Home = () => {
+
+  const doNothing = () => { } // make the proptypes pass for dropdown test
   return (
     <div>
       <Button raised>Click IT GOOOOOD</Button>
@@ -11,6 +13,7 @@ const Home = () => {
           { name: "item 2", value: 2 },
           { name: "item 3", value: 3 }
         ]}
+        onSelect={doNothing}
       ></DropDown>
     </div>
   );
