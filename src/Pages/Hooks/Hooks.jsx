@@ -1,13 +1,16 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Button, DropDown, TextArea } from "@healthwise-ui/core";
 
 const Hooks = () => {
   const [list, setList] = useState(["item1", "item2"]);
   const [newVal, setNewVal] = useState("");
 
   function AddListItem() {
-    list.push(newVal);
-    setList(list);
-    setNewVal("");
+    if (newVal != "" && newVal != null) {
+      list.push(newVal);
+      setList(list);
+      setNewVal("");
+    }
   }
 
   var listRender = list.map(item => {
@@ -16,14 +19,14 @@ const Hooks = () => {
 
   return (
     <div>
-      <input
+      <TextArea
         type="text"
         value={newVal}
         onChange={e => {
           setNewVal(e.target.value);
         }}
-      ></input>
-      <button onClick={AddListItem}>Click Me</button>
+      ></TextArea>
+      <Button onClick={AddListItem}>Click Me</Button>
 
       <ul>{listRender}</ul>
     </div>
