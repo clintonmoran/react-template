@@ -14,7 +14,6 @@ export const HookItems = () => {
   }, [dispatch]);
   return (
     <div>
-      OHHH SHIT
       <ul>
         {items.map(item => {
           return <HookItem key={item.id} item={item} />;
