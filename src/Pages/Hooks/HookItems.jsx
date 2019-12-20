@@ -1,13 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useAppState } from "../Home/State/AppState";
+import Api from "../../Api/MockApi";
+import { ItemsRetrieved } from "../Home/State/AppStateActions";
 
-const HookItems = ({ items }) => {
+import { HookItem } from "./HookItem";
+
+export const HookItems = () => {
+  const [{ items }, dispatch] = useAppState();
+  useEffect(() => {
+    Api.getItems().then(items => {
+      dispatch(ItemsRetrieved(items));
+    });
+  }, [dispatch]);
   return (
-    <ul data-testid="items">
-      {items.map(item => {
-        return <li data-testid="item" key={item.id}>{item.id}: {item.title}</li>;
-      })}
-    </ul>
+    <div>
+      OHHH SHIT
+      <ul>
+        {items.map(item => {
+          return <HookItem key={item.id} item={item} />;
+        })}
+      </ul>
+    </div>
   );
 };
-
-export default HookItems;

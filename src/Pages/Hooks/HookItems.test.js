@@ -1,8 +1,8 @@
 import React from 'react'
 import '@testing-library/jest-dom/extend-expect'
-import { render, cleanup, findByTestId, findAllByTestId } from '@testing-library/react'
+import { render, cleanup } from '@testing-library/react'
 
-import HookItems from './HookItems'
+import { HookItems } from './HookItems'
 
 afterEach(cleanup);
 

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Button, DropDown, TextArea } from "@healthwise-ui/core";
+import { HookItems } from "./HookItems";
 
 const Hooks = () => {
   const [list, setList] = useState(["item1", "item2"]);
@@ -13,10 +14,6 @@ const Hooks = () => {
     }
   }
 
-  var listRender = list.map(item => {
-    return <li>{item}</li>;
-  });
-
   return (
     <div>
       <TextArea
@@ -28,7 +25,7 @@ const Hooks = () => {
       ></TextArea>
       <Button onClick={AddListItem}>Click Me</Button>
 
-      <ul>{listRender}</ul>
+      <HookItems />
     </div>
   );
 };
