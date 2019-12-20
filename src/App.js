@@ -14,7 +14,7 @@ import AppStateReducer, {
   initialState as InitialAppState
 } from "./Pages/Home/State/AppStateReducer";
 
-function App() {
+export default function App() {
   return (
     <AppStateProvider reducer={AppStateReducer} initialState={InitialAppState}>
       <Router>
@@ -38,5 +38,3 @@ function App() {
     </AppStateProvider>
   );
 }
-
-export default App;

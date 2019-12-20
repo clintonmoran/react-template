@@ -1,10 +1,10 @@
 import React from "react";
 
-const HookItems = items => {
+const HookItems = ({ items }) => {
   return (
-    <ul>
-      {list.map(item => {
-        return <li>{item}</li>;
+    <ul data-testid="items">
+      {items.map(item => {
+        return <li data-testid="item" key={item.id}>{item.id}: {item.title}</li>;
       })}
     </ul>
   );
