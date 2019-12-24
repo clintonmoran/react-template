@@ -1,8 +1,8 @@
 import { ITEMS_RETREIVED, ITEM_SELECTED, ITEM_ADDED } from "./AppStateActions";
 
-const initialState = { items: [] };
+export const initialState = { items: [] };
 
-const appStateReducer = (state, action) => {
+export const appStateReducer = (state, action) => {
   switch (action.type) {
     case ITEMS_RETREIVED: {
       return { ...state, items: action.items };
@@ -42,5 +42,5 @@ const appStateReducer = (state, action) => {
   }
 };
 
-export { initialState };
-export default appStateReducer;
+// export { initialState };
+// export default appStateReducer;
